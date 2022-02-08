@@ -18,7 +18,8 @@ public enum HttpStatusCode {
 
     public final String reasonPhrase;
     public final int statusCode;
-    HttpStatusCode(int statusCode,String reasonPhrase){
+
+    HttpStatusCode(int statusCode, String reasonPhrase) {
         this.statusCode = statusCode;
         this.reasonPhrase = reasonPhrase;
     }

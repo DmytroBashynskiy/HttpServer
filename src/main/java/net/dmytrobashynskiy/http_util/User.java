@@ -23,6 +23,6 @@ public class User {
     @Override
     public String toString() {
         return "User has name: {" +
-                name + "} and email {" + email  + '}';
+                name + "} and email {" + email + '}';
     }
 }
