@@ -7,11 +7,8 @@ import java.util.Map;
 public class Request {
 
 
-
     /**
      * This is a request data object.
-     *
-     *
      */
 
     private HttpMethod methodName;
@@ -20,7 +17,7 @@ public class Request {
     private HttpStatusCode requestError;
     private String messageBody;
     private List<String> tempArray;
-    private Map<String,String> headers;
+    private Map<String, String> headers;
     //private JsonNode userData;
     private User userData;
 
@@ -39,7 +36,6 @@ public class Request {
     public void setMessageBody(String messageBody) {
         this.messageBody = messageBody;
     }
-
 
 
     public List<String> getTempArray() {

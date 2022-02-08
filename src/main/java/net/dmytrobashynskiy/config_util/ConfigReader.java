@@ -7,11 +7,13 @@ import java.util.Properties;
 
 public class ConfigReader {
     Properties properties;
+
     public ConfigReader() throws IOException {
         properties = new Properties();
     }
-    public int getPort(){
-        try(FileReader fileReader = new FileReader("serverConfig/config.properties", StandardCharsets.UTF_8)){
+
+    public int getPort() {
+        try (FileReader fileReader = new FileReader("serverConfig/config.properties", StandardCharsets.UTF_8)) {
             properties.load(fileReader);
         } catch (IOException e) {
             e.printStackTrace();
