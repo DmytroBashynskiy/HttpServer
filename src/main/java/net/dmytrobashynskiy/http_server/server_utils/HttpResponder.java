@@ -1,7 +1,8 @@
-package net.dmytrobashynskiy.http_util;
+package net.dmytrobashynskiy.http_server.server_utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.dmytrobashynskiy.http_util.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class HttpResponder {
             //deciding part
             switch (currentMethod) {
                 case GET:
-                    if (currentArgument.contains("/users")) {
+                    if (currentArgument.equals("/users")) {
                         if (users.isEmpty()) {
                             //if no users are in the list
                             replyCode = HttpStatusCode.CLIENT_ERROR_500_INTERNAL_SERVER_ERROR;
@@ -53,7 +54,7 @@ public class HttpResponder {
                     }
                     break;
                 case POST:
-                    if (currentArgument.contains("/user")) {
+                    if (currentArgument.equals("/user")) {
                         //add user to the table
                         Iterator<User> iterator = users.iterator();
                         User overwrittenUser = null;

@@ -24,7 +24,7 @@ public class HttpClient {
             "Cookie: Idea-f2a340a8=e79dc0a2-4a59-4917-b3ef-f7a229edd54a\n" +
             "Upgrade-Insecure-Requests: 1" +
 
-            "\n";
+            "\n\n";
     private static String getUserRequest= "GET localhost:9090/users HTTP/1.1\n" +
             "Host: localhost:9090\n" +
             "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:93.0) Gecko/20100101 Firefox/93.0\n" +
@@ -111,7 +111,7 @@ public class HttpClient {
                         new InputStreamReader(socket.getInputStream(), StandardCharsets.US_ASCII));
                     PrintWriter output = new PrintWriter(socket.getOutputStream()))
                 {
-                    output.println(getUserRequest);
+                    output.println(getRequest);
                     output.flush();
                     do{
                         String str = input.readLine();
