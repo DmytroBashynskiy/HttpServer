@@ -111,7 +111,7 @@ public class HttpClient {
                         new InputStreamReader(socket.getInputStream(), StandardCharsets.US_ASCII));
                     PrintWriter output = new PrintWriter(socket.getOutputStream()))
                 {
-                    output.println(getRequest);
+                    output.println(postUserRequest1);
                     output.flush();
                     do{
                         String str = input.readLine();

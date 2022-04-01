@@ -2,7 +2,7 @@ package net.dmytrobashynskiy.http_server.server_utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.dmytrobashynskiy.http_util.*;
+import net.dmytrobashynskiy.http_server.server_utils.http_util.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;

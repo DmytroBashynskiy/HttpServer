@@ -6,10 +6,18 @@ import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class ConfigReader {
-    Properties properties;
+    private Properties properties;
+    private static ConfigReader configReader;
 
-    public ConfigReader() throws IOException {
+    private ConfigReader() {
         properties = new Properties();
+    }
+
+    public static ConfigReader getInstance(){
+        if(configReader==null){
+            return new ConfigReader();
+        }
+        return configReader;
     }
 
     public int getPort() {
