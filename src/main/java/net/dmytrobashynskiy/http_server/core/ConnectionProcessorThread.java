@@ -50,13 +50,17 @@ public class ConnectionProcessorThread extends Thread{
         LOGGER.info("Client disconnected!");
     }
     private List<String> parseRequest(List<String> inputRequest) {
+        Object lock = new Object();
         HttpParser parser = new HttpParser(inputRequest);
         HttpResponder responder = new HttpResponder(parser.parse(), users);
         Response response = responder.analyze();
         //update the user list
 
         //TODO needs some global user storage, independent of anything
-        users = response.getUsers();
+        synchronized (lock){
+            users = response.getUsers();
+        }
+
         //response text array and code
         return response.getResponseLines();
     }
