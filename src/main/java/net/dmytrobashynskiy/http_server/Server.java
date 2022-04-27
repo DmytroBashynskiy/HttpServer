@@ -10,9 +10,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-interface Server {
+public interface Server {
 
-    void run(int port);
+    void run();
     void stop();
 
 }

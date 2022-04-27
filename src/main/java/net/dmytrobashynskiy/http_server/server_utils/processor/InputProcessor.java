@@ -13,8 +13,8 @@ import java.util.Scanner;
 
 public class InputProcessor {
 
-    private static final Logger logger
-            = LoggerFactory.getLogger("DmytroServer");
+    private static final Logger LOGGER
+            = LoggerFactory.getLogger(InputProcessor.class);
 
     public InputDTO readInputStream(InputStream inputStream) throws IOException {
         ByteArrayOutputStream byteArray = new ByteArrayOutputStream();
@@ -64,7 +64,7 @@ public class InputProcessor {
             charFocus = inputStream.read();
             //this detects pings
             if (charFocus == -1) {
-                logger.info("Incoming ping detected, reopening socket.");
+                LOGGER.info("Incoming ping detected, reopening socket.");
                 dto.setPing(true);
                 break;
             }

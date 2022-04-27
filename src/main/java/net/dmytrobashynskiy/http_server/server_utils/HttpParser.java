@@ -2,10 +2,10 @@ package net.dmytrobashynskiy.http_server.server_utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.dmytrobashynskiy.http_util.HttpMethod;
-import net.dmytrobashynskiy.http_util.HttpStatusCode;
-import net.dmytrobashynskiy.http_util.Request;
-import net.dmytrobashynskiy.http_util.User;
+import net.dmytrobashynskiy.http_server.server_utils.http_util.HttpMethod;
+import net.dmytrobashynskiy.http_server.server_utils.http_util.HttpStatusCode;
+import net.dmytrobashynskiy.http_server.server_utils.http_util.Request;
+import net.dmytrobashynskiy.http_server.server_utils.http_util.User;
 
 import java.util.*;
 
